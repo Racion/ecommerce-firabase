@@ -33,13 +33,14 @@
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+        font-size: 2rem;
         line-height: 1;
         font-weight: 400;
         text-transform: uppercase;
-        padding: 0.8rem 1rem;
+        padding: 1rem 1.5rem;
         border: 1px solid black;
         z-index: 2;
-        background: white;
+        background: rgba(255, 255, 255, 0.9);
       }
     }
   }
