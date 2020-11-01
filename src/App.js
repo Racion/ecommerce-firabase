@@ -1,15 +1,36 @@
+// *Dependencies
 import React from "react";
-import Header from "./components";
-import "./default.scss";
+import { Route, Switch } from "react-router-dom";
+// *Components
 import Homepage from "./pages/Homepage";
+import Registration from "./pages/Registration";
+import "./default.scss";
+// *Layouts
+import MainLayout from "./layouts/MainLayout";
+import HomepageLayout from "./layouts/HomepageLayout";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <div className="main">
-        <Homepage />
-      </div>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <HomepageLayout>
+              <Homepage />
+            </HomepageLayout>
+          )}
+        />
+        <Route
+          path="/registration"
+          render={() => (
+            <MainLayout>
+              <Registration />
+            </MainLayout>
+          )}
+        />
+      </Switch>
     </div>
   );
 }
